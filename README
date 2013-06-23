@@ -1,0 +1,19 @@
+/**
+ *Oncioiu Anamaria Raluca, grupa 313CA
+ */
+
+		
+	Informatiile despre o adresa IP le-am pastrat intr-o structura 'adr', care contine doi intregi: unul pentru adresa, celalalt pentru masca. 
+	
+	Functia care construieste o adresa IP verifica daca exista alte caractere in plus si semnaleaza un mesaj de eroare in acest caz. De asemenea,
+daca valoarea octetilor depaseste 255 sau adresa nu are in reprezentare 4 octeti, este semnalata eroarea.
+
+	In cazul unei adrese valide, se retine fiecare octet intr-un string si apoi se converteste in intreg. Se retine intr-o variabila de tip 'adr', valoarea mastii si adresa ip, reprezentata sub forma unui intreg lung cu ajutorul functiei 'adr_int_lung'. 
+	  
+	Se muta cifra 1 pe pozitia 32 si se scade 1. Din operatia de scadere pe biti, rezulta o masca ce are primul bit egal cu 0. Se aduna un 1 pentru primul bit. Din masca 255.255.255.255 se scoate un numar de biti de 1 pentru a obtine masca unui cartier anume.
+	
+	Adresa de retea este calculata cu ajutorul functiei adresa_retea. Se face SI logic pe biti intre adresa IP si masca, reprezentate ca intregi 
+lungi.
+
+	Adresa de broadcast este obtinuta printr-un SAU logic pe biti intre adresa IP si rezultatul scaderii din 255.255.255.255 a mastii adresei IP. 
+ 	
